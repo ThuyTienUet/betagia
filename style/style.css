@@ -1,0 +1,36 @@
+.container {
+  width: 90%;
+}
+
+.moz-banner {
+  background: url("../src/assets/beans.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 400px;
+}
+
+.navbar-space {
+  padding-bottom: 15px;
+}
+
+.title-header {
+  padding-top: 200px;
+  color: white;
+  text-align: center;
+}
+
+.category {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #55595c;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
