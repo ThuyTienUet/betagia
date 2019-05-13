@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
-import HomePageBanner from './HomePageBanner';
-import RecipeList from './RecipeList';
+import ListOrder from './ListOrder';
 
 class HomePage extends Component {
+
   render() {
+    const isLogged = sessionStorage.getItem("isLogged");
     return (
       <div>
-        <Navbar activeNav="home"/>
-        <HomePageBanner />
-        {/* <RecipeList /> */}
-      </div>
+        <Navbar activeNav="home" />
+        <ListOrder />
+       </div>
     )
   }
 }

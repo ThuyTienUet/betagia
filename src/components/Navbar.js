@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import * as actions from '../actions/products';
 import { Menu, Segment, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import HomePageBanner from './HomePageBanner';
 import LoginLogout from './LoginLogout';
 
 class Navbar extends Component {

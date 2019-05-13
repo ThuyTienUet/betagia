@@ -8,7 +8,8 @@ import { Button } from 'semantic-ui-react';
 class Login extends Component {
     state = {
         email: '',
-        password: ''
+        password: '',
+        error: ''
     }
 
     _handleChangeTextForm(field, e) {
@@ -23,20 +24,25 @@ class Login extends Component {
         login(email, password)
         .then(res => {
             if (res) {
-                this.props.history.push('/');
+                sessionStorage.setItem("isLogged", true);
+                this.props.history.push('/home');
             }            
         })
         .catch(err => {
-            console.log(err);           
+            console.log(err); 
+            this.setState({
+                error: err.message
+            })          
         })        
     }
 
     render() {
         const { handleSubmit } = this.props;
-        const {email, password} = this.state;
+        const {email, password, error} = this.state;
 
         return (
             <div className="Login"> 
+            {error && <div role="alert" class="alert alert-danger">{error}</div>}
                 <form onSubmit={handleSubmit(this._handleSubmit.bind(this))}>
                     <div className="form-group">
                         <label>Email</label>
