@@ -6,7 +6,7 @@ import reduxThunk from 'redux-thunk';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import reducers from './reducers';
-// import HomePage from './components/HomePage';
+import HomePage from './components/HomePage';
 import Login from './components/Login';
 import AddProduct from './components/AddProduct';
 import ProductsPage from './components/ProductsPage'
@@ -18,10 +18,11 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
-          {/* <Route exact path="/" component={HomePage} /> */}
-          <Route path="/login" component={Login} />
+
+          <Route exact path="/" component={Login} />
+          <Route path="/home" component={HomePage} />
           <Route path="/new" component={AddProduct} />
-          <Route path="/products" component={ProductsPage}/>      
+          <Route path="/products" component={ProductsPage}/> 
           {/* <Route path="/recipes/:id" component={RecipeShow} /> */}
           {/* <Route path="/recipes" component={RecipePage} /> */}
         </Switch>

@@ -2,7 +2,6 @@ import * as firebase from "firebase";
 import _ from "lodash";
 import { FETCH_PRODUCTS, FETCH_PRODUCT} from "./types";
 import config from "../config";
-import axios from "axios";
 
 if (!firebase.apps.length) {
   firebase.initializeApp(config);
