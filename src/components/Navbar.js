@@ -18,13 +18,13 @@ class Navbar extends Component {
             Home
           </Menu.Item>
           <Menu.Item
-            name="recipes"
-            active={activeNav === 'recipes'}
+            name="products"
+            active={activeNav === 'products'}
             as={Link}
-            to="/recipes"
+            to="/products"
           >
             <Icon name="food" size="massive" />
-            Recipes
+            Products
           </Menu.Item>
           <Menu.Item
             name="fantasy"

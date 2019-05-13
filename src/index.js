@@ -9,6 +9,7 @@ import reducers from './reducers';
 // import HomePage from './components/HomePage';
 import Login from './components/Login';
 import AddProduct from './components/AddProduct';
+import ProductsPage from './components/ProductsPage'
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 
@@ -19,7 +20,8 @@ ReactDOM.render(
         <Switch>
           {/* <Route exact path="/" component={HomePage} /> */}
           <Route path="/login" component={Login} />
-          <Route path="/new" component={AddProduct} />      
+          <Route path="/new" component={AddProduct} />
+          <Route path="/products" component={ProductsPage}/>      
           {/* <Route path="/recipes/:id" component={RecipeShow} /> */}
           {/* <Route path="/recipes" component={RecipePage} /> */}
         </Switch>
