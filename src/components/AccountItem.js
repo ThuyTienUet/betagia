@@ -1,47 +1,47 @@
 import React, { Component } from "react";
 
-class ProductItem extends Component {
+class AccountItem extends Component {
 
   _handleOnClick() {
     console.log('on click')
   }
 
   render() {
-    const { product, key } = this.props
+    const { account, key } = this.props
 
     return (
       <div className='row' key={key}>
         <div className='col-md-2'>
-          <img src='./src/assets/coffee.jpg'
+          <img src='./src/assets/beans.jpeg'
             style={{ width: '100px', height: '100px' }}
             alt='avt'
           />  
         </div>
         <div className='col-md-3 text-left' >
-          <h6>{product.productName}</h6>
+          <h6>{account.customerName}</h6>
         </div>
         <div className='col-md-2'>
-          <h6>{product.category}</h6>
+          <h6>{account.phoneNumber}</h6>
         </div>
         <div className='col-md-2'>
-          <h6>{product.price}</h6>
-        </div>
-        <div className='col-md-1'>
-          <button className='btn btn-success btn-md'
-            onClick={this._handleOnClick.bind(this)}>
-            <i className="far fa-edit"></i>
-          </button>
+          <h6>{account.username}</h6>
         </div>
         <div className='col-md-1'>
           <button className='btn btn-primary btn-md'
             onClick={this._handleOnClick.bind(this)}>
-            <i className="far fa-list-alt"></i>
+            <span className='glyphicon glyphicon-chevron-right'>History</span>
+          </button>
+        </div>
+        <div className='col-md-1'>
+          <button className='btn btn-default btn-md'
+            onClick={this._handleOnClick.bind(this)}>
+            <span className='glyphicon glyphicon-info-sign'>More Info</span>
           </button>
         </div>
         <div className='col-md-1'>
           <button className='btn btn-danger btn-md'
             onClick={this._handleOnClick.bind(this)}>
-            <i className="far fa-trash-alt"></i>
+            <span className='glyphicon glyphicon-remove'>Delete</span>
           </button>
         </div>
       </div>
@@ -49,4 +49,4 @@ class ProductItem extends Component {
   }
 }
 
-export default ProductItem
+export default AccountItem
